@@ -5,3 +5,10 @@
   align-items: $align;
   gap: $gap;
 }
+
+//responsive
+@mixin screenSize($max, $min) {
+  @media only screen and (max-width: $max) and (min-width: $min) {
+    @content;
+  }
+}

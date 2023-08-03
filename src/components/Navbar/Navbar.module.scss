@@ -1,0 +1,5 @@
+.Navbar {
+  @include flex(row, center, center, 0);
+  padding: 2%;
+  background-color: $primary-color-light;
+}
