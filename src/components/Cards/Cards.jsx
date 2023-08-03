@@ -5,8 +5,6 @@ import { useState } from "react";
 const Cards = ({ data }) => {
   const [more, setMore] = useState(8);
 
-  console.log(data);
-
   const onClickMore = () => {
     if (more >= 32) {
       setMore(8);
@@ -18,8 +16,8 @@ const Cards = ({ data }) => {
   return (
     <>
       <div className={styles.Cards}>
-        {data.slice(0, more).map((itinerary) => (
-          <Card data={itinerary} />
+        {data.slice(0, more).map((itinerary, i) => (
+          <Card key={i} data={itinerary} />
         ))}
       </div>
       <div className={styles.seeMore}>

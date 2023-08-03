@@ -1,3 +1,4 @@
+import Arrow from "../assets/arrow";
 import styles from "./Card.module.scss";
 
 const Card = ({ data }) => {
@@ -25,6 +26,7 @@ const Card = ({ data }) => {
             <p>{data.departureDate.slice(0, 10)}</p>
             <p className={styles.hour}>{data.departureDate.slice(10, 15)}</p>
           </div>
+          <Arrow />
           <div className={styles.arrivalsDate}>
             <p>{data.arrivalDate.slice(0, 10)}</p>
             <p className={styles.hour}>{data.arrivalDate.slice(10, 16)}</p>
