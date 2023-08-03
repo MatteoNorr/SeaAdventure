@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Noto Sans");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans";
+}
+
+h1 {
+  font-size: $mainTitle;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: $title;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: $subtitle;
+  font-weight: 700;
+}
+
+p {
+  font-size: $paragraph;
+}
