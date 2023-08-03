@@ -3,17 +3,17 @@ import styles from "./RandomItineraries.module.scss";
 import banner from "../../../public/banner.jpeg";
 
 const RandomItineraries = ({ data }) => {
-  const randomizer = () => {
-    let i = data.length;
+  //   const randomizer = () => {
+  //     let i = data.length;
 
-    while (i) {
-      const j = Math.floor(Math.random() * i--);
-      [data[i], data[j]] = [data[j], data[i]];
-    }
-    return data;
-  };
+  //     while (i) {
+  //       const j = Math.floor(Math.random() * i--);
+  //       [data[i], data[j]] = [data[j], data[i]];
+  //     }
+  //     return data;
+  //   };
 
-  const randomArray = randomizer();
+  //   const randomArray = randomizer();
 
   return (
     <div className={styles.RandomItineraries}>
@@ -25,9 +25,12 @@ const RandomItineraries = ({ data }) => {
           <h2>+40 itineraries</h2>
         </div>
       </div>
-      {randomArray.map((itinerary, i) => (
-        <Card data={itinerary} key={i} />
-      ))}
+      <h1>Adventure to experience</h1>
+      <div className={styles.cardsContainer}>
+        {data.slice(0, 6).map((itinerary, i) => (
+          <Card data={itinerary} key={i} />
+        ))}
+      </div>
     </div>
   );
 };
