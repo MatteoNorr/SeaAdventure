@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import Cards from "@/components/Cards";
 import RandomItineraries from "@/components/RandomItineraries";
 import { data } from "../../data";
+import ListLocations from "@/components/ListLocations";
 
 export default function Home() {
   return (
@@ -15,10 +16,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
-      <Hero />
-      <Cards data={data} />
-      <RandomItineraries data={data} />
+      <main>
+        <Navbar />
+        <Hero />
+        <Cards data={data} />
+        <RandomItineraries data={data} />
+      </main>
     </>
   );
 }

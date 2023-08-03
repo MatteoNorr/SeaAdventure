@@ -1,6 +1,8 @@
 .RandomItineraries {
-  @include flex(row, center, center, 10px);
-  flex-wrap: wrap;
+  h1 {
+    text-align: center;
+    color: $primary-color-dark;
+  }
 
   .banner {
     position: relative;
@@ -28,5 +30,11 @@
       z-index: 9;
       color: $primary-color-light;
     }
+  }
+
+  .cardsContainer {
+    @include flex(row, center, center, 20px);
+    flex-wrap: wrap;
+    margin: 2% 0;
   }
 }

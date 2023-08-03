@@ -1,9 +1,11 @@
 import styles from "./Cards.module.scss";
 import Card from "../Card";
 import { useState } from "react";
+import ListLocations from "../ListLocations";
 
 const Cards = ({ data }) => {
   const [more, setMore] = useState(8);
+  const [locations, setLocations] = useState(data);
 
   const onClickMore = () => {
     if (more >= 32) {
@@ -13,10 +15,19 @@ const Cards = ({ data }) => {
     }
   };
 
+  const onClickFilter = (e) => {
+    if (e.target.value === "Mostra tutti") {
+      setLocations(data);
+    } else {
+      setLocations(data.filter((data) => data.arrival.Port === e.target.value));
+    }
+  };
+
   return (
     <>
+      <ListLocations data={data} onClickFilter={(e) => onClickFilter(e)} />
       <div className={styles.Cards}>
-        {data.slice(0, more).map((itinerary, i) => (
+        {locations.slice(0, more).map((itinerary, i) => (
           <Card key={i} data={itinerary} />
         ))}
       </div>
