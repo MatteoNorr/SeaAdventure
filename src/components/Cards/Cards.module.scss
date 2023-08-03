@@ -1,5 +1,15 @@
 .Cards {
   @include flex(row, center, center, 20px);
   flex-wrap: wrap;
-  margin: 5% 0;
+  margin: 2% 0;
+}
+
+.seeMore {
+  @include flex(row, center, center, 0);
+
+  button {
+    @extend %button;
+    width: 200px;
+    padding: 1%;
+  }
 }

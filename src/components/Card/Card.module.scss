@@ -70,13 +70,6 @@
   }
 
   button {
-    margin-top: 3%;
-    padding: 3%;
-    background-color: $primary-color-dark;
-    border: none;
-    border-radius: 5px;
-    color: $primary-color-light;
-    font-weight: 600;
-    cursor: pointer;
+    @extend %button;
   }
 }
