@@ -1,0 +1,82 @@
+.Card {
+  @include flex(column, center, space-between, 0);
+  min-width: 400px;
+  padding: 2%;
+  background-color: $primary-color-light;
+  border-radius: 10px;
+
+  h2 {
+    color: $primary-color-dark;
+    margin: 2% 0;
+  }
+
+  .budget {
+    p {
+      margin: 0;
+    }
+    span {
+      font-size: $subtitle;
+      font-weight: bolder;
+    }
+  }
+
+  .itineraryInfo {
+    .itineraryInfo__move {
+      @include flex(row, space-between, center, 20px);
+      margin: 5% 0;
+    }
+
+    .departurePosition,
+    .otherInfo {
+      p {
+        margin: 0;
+      }
+
+      .title {
+        color: $secondary-color-light;
+        margin: 0;
+      }
+
+      .departure {
+        color: $primary-color-dark;
+      }
+    }
+  }
+
+  .itineraryInfo__date {
+    @include flex(row, space-between, center, 20px);
+    margin: 5% 0;
+
+    p {
+      margin: 0;
+    }
+
+    .hour {
+      color: $secondary-color-light;
+      font-size: $subParagraph;
+    }
+  }
+
+  .reservations {
+    p {
+      margin: 0;
+    }
+
+    .available {
+      span {
+        color: $secondary-color-light;
+      }
+    }
+  }
+
+  button {
+    margin-top: 3%;
+    padding: 3%;
+    background-color: $primary-color-dark;
+    border: none;
+    border-radius: 5px;
+    color: $primary-color-light;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}

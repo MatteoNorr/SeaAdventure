@@ -1,0 +1,5 @@
+.Cards {
+  @include flex(row, center, center, 20px);
+  flex-wrap: wrap;
+  margin: 5% 0;
+}
