@@ -1,3 +1,8 @@
+.filters {
+  @include flex(row, space-around, center, 10px);
+  flex-wrap: wrap;
+}
+
 .Cards {
   @include flex(row, center, center, 20px);
   flex-wrap: wrap;

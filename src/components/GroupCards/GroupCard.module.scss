@@ -1,0 +1,14 @@
+.GroupCard {
+  .portTitle {
+    margin: 0 3%;
+    padding: 1%;
+    background-color: $primary-color-dark;
+    color: $primary-color-light;
+  }
+
+  .group {
+    margin: 1% 3%;
+    @include flex(row, flex-start, center, 30px);
+    flex-wrap: wrap;
+  }
+}

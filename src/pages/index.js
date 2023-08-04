@@ -5,7 +5,6 @@ import Hero from "@/components/Hero";
 import Cards from "@/components/Cards";
 import RandomItineraries from "@/components/RandomItineraries";
 import { data } from "../../data";
-import ListLocations from "@/components/ListLocations";
 
 export default function Home() {
   return (

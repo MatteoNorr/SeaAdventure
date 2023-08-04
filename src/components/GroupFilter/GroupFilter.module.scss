@@ -1,0 +1,16 @@
+.GroupFilter {
+  margin: 2%;
+  padding: 2%;
+  outline: none;
+
+  border-radius: 10px;
+
+  font-size: $paragraph;
+  cursor: pointer;
+
+  option {
+    background-color: $secondary-color-dark;
+    border: solid black 2px;
+    color: $secondary-color-light;
+  }
+}
