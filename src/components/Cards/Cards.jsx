@@ -33,11 +33,7 @@ const Cards = ({ data }) => {
       {view ? (
         <>
           <div className={styles.filters}>
-            <ListLocations
-              data={data}
-              onClickFilter={(e) => onClickFilter(e)}
-            />
-            <GroupFilter onClickGroups={onClickGroups} />
+            <GroupFilter onClickGroups={onClickGroups} selected />
           </div>
           <GroupCard data={data} />
         </>
