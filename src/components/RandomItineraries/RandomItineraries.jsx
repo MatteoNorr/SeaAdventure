@@ -1,6 +1,7 @@
 import Card from "../Card";
 import styles from "./RandomItineraries.module.scss";
 import banner from "../../../public/banner.jpeg";
+import dynamic from "next/dynamic";
 
 const RandomItineraries = ({ data }) => {
   const randomizer = (array) => {
@@ -35,4 +36,6 @@ const RandomItineraries = ({ data }) => {
   );
 };
 
-export default RandomItineraries;
+export default dynamic(() => Promise.resolve(RandomItineraries), {
+  ssr: false,
+});
