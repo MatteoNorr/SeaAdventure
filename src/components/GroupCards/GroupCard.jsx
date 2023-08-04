@@ -20,15 +20,15 @@ const GroupCard = ({ data }) => {
   return (
     <div className={styles.GroupCard}>
       {port.length &&
-        port.map((port) => (
-          <>
+        port.map((port, i) => (
+          <div key={i}>
             <h2 className={styles.portTitle}>{port}</h2>
             <div className={styles.group}>
-              {filterCard(port).map((data) => (
-                <Card data={data} />
+              {filterCard(port).map((data, i) => (
+                <Card data={data} key={i} />
               ))}
             </div>
-          </>
+          </div>
         ))}
     </div>
   );
